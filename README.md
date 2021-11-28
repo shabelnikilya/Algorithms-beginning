@@ -1,1 +1,3 @@
-Learning algorithms
+# Learning algorithms
+О проекте:
+В проекте будут разобраны алгоритмы используемые в Java.
