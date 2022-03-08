@@ -18,4 +18,26 @@ public class SortingByInserts {
             }
         }
     }
+
+    /**
+     * С лева всегда будет отсортированная часть массива
+     * @param array
+     */
+    public static void secondSort(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            for (int j = i; j > 0 && array[j] < array[j - 1]; j--) {
+                int swap = array[j];
+                array[j] = array[j - 1];
+                array[j - 1] = swap;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] testArr = new int[]{6, 3, 8, 8, 6, 9, 4, 11, 1};
+        secondSort(testArr);
+        for (int i : testArr) {
+            System.out.println(i);
+        }
+    }
 }
